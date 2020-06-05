@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.genSci.tools.DataQuizHelper.PrimaryController">
+   <children>
+      <ToolBar prefHeight="40.0" prefWidth="600.0">
+        <items>
+          <Button mnemonicParsing="false" onAction="#transAction" text="変換" />
+            <Button mnemonicParsing="false" onAction="#quitAction" text="終了" />
+        </items>
+      </ToolBar>
+      <SplitPane dividerPositions="0.4983277591973244" layoutY="40.0" prefHeight="269.0" prefWidth="600.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TextArea fx:id="srcArea" layoutY="40.0" prefHeight="227.0" prefWidth="297.0" />
+                  <ToolBar prefHeight="40.0" prefWidth="297.0">
+                    <items>
+                      <Button mnemonicParsing="false" onAction="#openAction" text="Open..." />
+                        <Button mnemonicParsing="false" onAction="#clearSrcArea" text="Clear" />
+                    </items>
+                  </ToolBar>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TextArea fx:id="codeArea" layoutY="40.0" prefHeight="227.0" prefWidth="297.0" />
+                  <ToolBar prefHeight="40.0" prefWidth="297.0">
+                    <items>
+                      <Button mnemonicParsing="false" onAction="#copyToClipboard" text="Copy" />
+                        <Button mnemonicParsing="false" onAction="#clearCodeArea" text="Clear" />
+                    </items>
+                  </ToolBar>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <TextArea fx:id="log" layoutY="309.0" prefHeight="92.0" prefWidth="600.0" />
+   </children>
+</AnchorPane>
