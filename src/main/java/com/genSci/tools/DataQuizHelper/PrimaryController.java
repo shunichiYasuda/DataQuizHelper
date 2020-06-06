@@ -48,7 +48,7 @@ public class PrimaryController {
 //				log.appendText(s+"\n");
 //			}
 			String outStr = "";
-			outStr ="<li>"+ targetArray[0]+"の値は"+"{1:NM:="+targetArray[1]+"}である。<li>\n";
+			outStr ="<li>"+ targetArray[0]+"の値は"+"{1:NM:="+targetArray[1]+"}である。</li>\n";
 			codeArea.appendText(outStr);	
 		}
 		codeArea.appendText("</ol>\n</p>\n");
